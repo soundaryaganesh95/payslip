@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import PayslipPage from './pages/PayslipPage';
@@ -8,14 +7,16 @@ function App() {
   return (
     <Routes>
 
-      {/* Login Route */}
+      {/* Default first page → HOMEPAGE */}
+      <Route path="/" element={<HomePage />} />
+
+      {/* Login Page */}
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/" element={<LoginPage />} />   {/* Default page */}
 
       {/* Home Route */}
-      <Route path="/home" element={<HomePage />} />  {/* REQUIRED */}
+      <Route path="/home" element={<HomePage />} />
 
-      {/* Payslip Route */}
+      {/* Payslip Page */}
       <Route path="/payslip" element={<PayslipPage />} />
 
     </Routes>
