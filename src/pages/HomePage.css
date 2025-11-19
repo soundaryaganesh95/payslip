@@ -1,0 +1,179 @@
+/* --- Global Reset/Base for the Page --- */
+.home-container {
+    /* *** KEY CHANGE 1: Use Flexbox for horizontal centering of the content wrapper *** */
+    display: flex;
+    flex-direction: column; /* Stack children (header and main content) vertically */
+    align-items: center; /* Centers the content wrappers horizontally */
+margin-Left:293px;
+margin-top:18px;
+    padding-top: 0; 
+    background-color: #f7f7f7; 
+    min-height: 100vh;
+    width: 100%; /* Ensure container takes full width of the viewport */
+}
+
+/* --- Centering Wrapper for the Header & Main Content --- */
+.header-content-wrapper,
+.home-main-content {
+    width: 90%; 
+    max-width: 600px; /* Limits width for central content */
+    margin: 0 auto;
+}
+
+/* --- 1. Header Styles: Dark Background --- */
+.header-wrapper {
+    background-color: #4B0082; /* Dark Purple */
+    margin-bottom: 30px; 
+    /* *** KEY CHANGE 2: Force the header background to stretch full width *** */
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; 
+}
+
+.header-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff; 
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 16px;
+    color: #ffffff; 
+    margin: -5px 0 0 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.generate-button {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.generate-button:hover {
+    background-color: #0056b3; 
+}
+
+.logout-button {
+    background-color: #4B0082;
+    color: #fff;
+    border: 1px solid #ffffff; 
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.logout-button:hover {
+    opacity: 0.85;
+}
+
+.separator {
+    display: none; 
+}
+
+
+/* --- 2. Content Area Title (Green Block) --- */
+.content-area {
+    background-color: #E0F2F1; 
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+.content-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #4B0082;
+    margin: 0;
+}
+
+/* --- 3. Payslip Info Card (White Card) --- */
+.payslip-card {
+    background-color: #fff;
+    width: 100%; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* 1. card-top-section: Main Flex Container (Logo/Address group on Left, Date on Right) */
+.card-top-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd; 
+}
+
+/* 2. logo-and-details-group: Logo and Company Address side-by-side */
+.logo-and-details-group {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    flex-grow: 1; 
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0; 
+}
+
+/* Company details text block */
+.company-details {
+    padding-top: 0;
+    flex-grow: 1; 
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.address-line {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.payslip-month-container {
+    text-align: right;
+    flex-shrink: 0; 
+}
+
+.payslip-month-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.payslip-month {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
